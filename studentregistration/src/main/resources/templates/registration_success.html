@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Success</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            background-color: #3498db;
+            color: #fff;
+            padding: 1em;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .info span {
+            display: inline-block;
+            width: 40%;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .info {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .info span {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Registration Succeeded!</h1>
+    </header>
+    <div class="container">
+        <div class="info">
+            <span>Full Name:</span>
+            <span th:text="${user.name}"></span>
+        </div>
+        <div class="info">
+            <span>Email:</span>
+            <span th:text="${user.email}"></span>
+        </div>
+        <div class="info">
+            <span>Password:</span>
+            <span th:text="${user.password}"></span>
+        </div>
+        <div class="info">
+            <span>Birthday:</span>
+            <span th:text="${user.birthday}"></span>
+        </div>
+        <div class="info">
+            <span>Profession:</span>
+            <span th:text="${user.profession}"></span>
+        </div>
+        <div class="info">
+            <span>Married?</span>
+            <span th:text="${user.married}"></span>
+        </div>
+        <div class="info">
+            <span>Gender:</span>
+            <span th:text="${user.gender}"></span>
+        </div>
+        <div class="info">
+            <span>Note:</span>
+            <span th:text="${user.note}"></span>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
